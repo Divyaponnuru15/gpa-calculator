@@ -2,7 +2,85 @@
 <html>
 <head>
     <title>GPA CALCULATOR </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <style>
+        
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Center headings */
+h1, h2 {
+    text-align: center;
+    width: 100%;
+}
+
+/* Responsive form */
+form {
+    width: 100%;
+    max-width: 500px; /* keeps form narrow on laptops */
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="number"],
+input[type="text"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Button styling */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive table */
+table {
+    width: 100%;
+    max-width: 500px;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #333;
+    text-align: center;
+    padding: 8px;
+}
+
+/* Responsive GIF */
+.cat-gif {
+    display: block;
+    margin: 20px auto;
+    width: 20vw;       /* width relative to viewport */
+    max-width: 150px;  /* max width on large screens */
+    min-width: 80px;   /* min width on small screens */
+    height: auto;
+}
+
+
+    </style>
 
 
     <script>
