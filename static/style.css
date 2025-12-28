@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color:whitesmoke
+}
+
+h1 {
+    color: #2c3e50;
+    text-align : center;
+}
+
+form {
+    background-color:white;
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+    
+    
+}
+
+input, button {
+    padding: 8px;
+    width: 100%;
+    margin-top: 10px;
+    
+    
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+   
+}
+button:hover {
+    background-color: #2980b9; /* darker blue on hover */
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+}
+
+.result-title {
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 20px;
+}
+
+ .cat-gif {
+    display: block;
+    margin: 20px auto;
+    width: 250px;
+    animation: pop 1s ease;
+}
+
+@keyframes pop {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+

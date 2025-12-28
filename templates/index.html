@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GPA CALCULATOR </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+
+    <script>
+        function generateSemesters() {
+            let total = document.getElementById("total_sem").value;
+            let container = document.getElementById("semester_inputs");
+            container.innerHTML = "";
+
+            for (let i = 1; i <= total; i++) {
+                container.innerHTML += `
+                    <h3>Semester ${i}</h3>
+                    Theory Grades (comma separated):
+                    <input type="text" name="theory_sem${i}" placeholder="S,A,B" required><br><br>
+
+                    Practical Grades (comma separated):
+                    <input type="text" name="practical_sem${i}" placeholder="A,B" required><br><br>
+                `;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+<h1> GPA Calculator</h1>
+
+<form method="POST">
+    Number of Semesters:
+    <input type="number" id="total_sem" name="total_sem" min="1" required
+           onchange="generateSemesters()">
+    <br><br>
+
+    <div id="semester_inputs"></div>
+
+    <button type="submit">Calculate GPA</button>
+</form>
+
+{% if gpa_list %}
+    <h2 class="result-title">Results</h2>
+
+
+    <table border="1" cellpadding="5">
+        <tr>
+          <th>Semester</th>
+            <th>GPA</th>
+        </tr>
+
+        {% for gpa in gpa_list %}
+        <tr>
+            <td>Sem {{ loop.index }}</td>
+            <td>{{ gpa }}</td>
+        </tr>
+        {% endfor %}
+
+        <tr>
+            <td><b>Final CGPA</b></td>
+            <td><b>{{ cgpa }}</b></td>
+        </tr>
+    </table>
+    <img src="{{ url_for('static', filename='cat.gif') }}" class="cat-gif">
+
+
+{% endif %}
+
+</body>
+</html>
