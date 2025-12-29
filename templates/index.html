@@ -117,33 +117,33 @@ table, th, td {
 
     <button type="submit">Calculate GPA</button>
 </form>
-
 {% if gpa_list %}
     <h2 class="result-title">Results</h2>
 
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Semester</th>
+                <th>GPA</th>
+            </tr>
 
-    <table border="1" cellpadding="5">
-        <tr>
-          <th>Semester</th>
-            <th>GPA</th>
-        </tr>
+            {% for gpa in gpa_list %}
+            <tr>
+                <td>Sem {{ loop.index }}</td>
+                <td>{{ gpa }}</td>
+            </tr>
+            {% endfor %}
 
-        {% for gpa in gpa_list %}
-        <tr>
-            <td>Sem {{ loop.index }}</td>
-            <td>{{ gpa }}</td>
-        </tr>
-        {% endfor %}
+            <tr>
+                <td><b>Final CGPA</b></td>
+                <td><b>{{ cgpa }}</b></td>
+            </tr>
+        </table>
+    </div>
 
-        <tr>
-            <td><b>Final CGPA</b></td>
-            <td><b>{{ cgpa }}</b></td>
-        </tr>
-    </table>
     <img src="{{ url_for('static', filename='cat.gif') }}" class="cat-gif">
-
-
 {% endif %}
+
 
 </body>
 </html>

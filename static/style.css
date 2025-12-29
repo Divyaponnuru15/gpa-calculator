@@ -18,9 +18,6 @@ form {
     box-sizing: border-box;
    }
 
-    
-
-
 input, button {
     
     padding: 8px;
@@ -28,8 +25,6 @@ input, button {
     margin: 10px 0; /* 10px top and bottom spacing */
     box-sizing: border-box;
 }
-
-    
 
 
 button {
@@ -44,18 +39,22 @@ button {
 button:hover {
     background-color: #2980b9; /* darker blue on hover */
 }
+/* Table wrapper (important) */
+    .table-container {
 
-table {
-   
-    margin: auto;
-    border-collapse: collapse;
-    margin-top: 20px;
-    width: 100%;           /* table fills container */
-    max-width: 500px;      /* restrict on large screens */
-    display: block;        /* allow scrolling */
-    overflow-x: auto;      /* scroll on small screens */
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;   /* scrolls on mobile */
+        margin-top: 3px;
 }
 
+/* Table styling */
+    table {
+    width: 100%;
+    max-width: 500px;
+    border-collapse: collapse;
+    margin: auto;
+    }
 
 
 th, td {
@@ -72,18 +71,18 @@ th {
 .result-title {
     text-align: center;
     color: #2c3e50;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
  .cat-gif {
     
     display: block;
     margin: 20px auto;
-    width: 20vw;        /* scales with screen width */
-    max-width: 150px;
-    min-width: 80px;
+    width: 25vw;        /* scales with screen width */
+    max-width: 200px;
+    min-width: 100px;
     height: auto;
-    animation: pop 1s ease;
+    animation: pop 2s ease;
 }
 
 
