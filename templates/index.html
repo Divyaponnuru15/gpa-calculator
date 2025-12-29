@@ -10,8 +10,8 @@
         
 /* Body styling */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 10;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -36,8 +36,8 @@ input[type="number"],
 input[type="text"],
 button {
     width: 100%;
-    padding: 10px;
-    margin: 5px 0 15px 0;
+    padding: 16px;
+    margin: 17px 15px 0 ;
     box-sizing: border-box;
     font-size: 16px;
 }
@@ -47,7 +47,7 @@ button {
     background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     cursor: pointer;
 }
 
@@ -60,7 +60,7 @@ table {
     width: 100%;
     max-width: 500px;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 table, th, td {
@@ -73,9 +73,9 @@ table, th, td {
 .cat-gif {
     display: block;
     margin: 20px auto;
-    width: 20vw;       /* width relative to viewport */
-    max-width: 150px;  /* max width on large screens */
-    min-width: 80px;   /* min width on small screens */
+    width: 30vw;       /* width relative to viewport */
+    max-width: 230px;  /* max width on large screens */
+    min-width: 100px;   /* min width on small screens */
     height: auto;
 }
 
@@ -96,7 +96,7 @@ table, th, td {
                     <input type="text" name="theory_sem${i}" placeholder="S,A,B" required><br><br>
 
                     Practical Grades (comma separated):
-                    <input type="text" name="practical_sem${i}" placeholder="A,B" required><br><br>
+                    <input type="text" name="practical_sem${i}" placeholder="S,A,B" required><br><br>
                 `;
             }
         }
@@ -111,7 +111,7 @@ table, th, td {
     Number of Semesters:
     <input type="number" id="total_sem" name="total_sem" min="1" required
            onchange="generateSemesters()">
-    <br><br>
+    <!-- <br><br> -->
 
     <div id="semester_inputs"></div>
 
