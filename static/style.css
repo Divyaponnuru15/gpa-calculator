@@ -85,6 +85,13 @@ th {
     height: auto;
     animation: pop 2s ease;
 }
+/* Media query for small screens (phones) */
+@media (max-width: 400px) {
+    .cat-gif {
+        width: 50vw;   /* bigger relative size */
+        max-width: 250px;
+    }
+}
 
 
 
